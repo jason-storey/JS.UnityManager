@@ -61,9 +61,18 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectTile.Designer.cs">
+      <DependentUpon>ProjectTile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectTile.resx">
+      <DependentUpon>ProjectTile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,7 +98,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="logo.png" />
+    <Content Include="unity-master-white.png" />
+    <Content Include="unity.png" />
     <Content Include="taskbaricon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JS.UnityManager.Application\JS.UnityManager.App.csproj">
+      <Project>{A01D80CF-4457-4A44-925E-35F237D948BD}</Project>
+      <Name>JS.UnityManager.App</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
