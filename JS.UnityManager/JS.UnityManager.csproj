@@ -54,24 +54,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="IUnityManagerCommands.cs" />
+    <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="ProjectTile.cs">
+    <Compile Include="EventLessControls\PassLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventLessControls\PassLabel.Designer.cs">
+      <DependentUpon>PassLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventLessControls\PassPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventLessControls\PassPanel.Designer.cs">
+      <DependentUpon>PassPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventLessControls\PassPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventLessControls\PassPictureBox.Designer.cs">
+      <DependentUpon>PassPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="MyComponents\ProjectTile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProjectTile.Designer.cs">
+    <Compile Include="MyComponents\ProjectTile.Designer.cs">
       <DependentUpon>ProjectTile.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <Compile Include="MyComponents\UnityVersionTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyComponents\UnityVersionTile.Designer.cs">
+      <DependentUpon>UnityVersionTile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjectTile.resx">
+    <EmbeddedResource Include="MyComponents\ProjectTile.resx">
       <DependentUpon>ProjectTile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -83,6 +108,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MyComponents\UnityVersionTile.resx">
+      <DependentUpon>UnityVersionTile.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,12 +126,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logo.png" />
-    <Content Include="unity-master-white.png" />
-    <Content Include="unity.png" />
-    <Content Include="taskbaricon.ico" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\open.png" />
+    <Content Include="Resources\unity-master-white.ico" />
+    <Content Include="Resources\unity-master-white.png" />
+    <Content Include="Resources\unity.png" />
+    <Content Include="Resources\taskbaricon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DarkerSmile.UnityManagement\DarkerSmile.UnityManagement.csproj">
+      <Project>{A7D9EB9C-8797-440F-9F66-9665FD3EAE45}</Project>
+      <Name>DarkerSmile.UnityManagement</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JS.UnityManager.Application\JS.UnityManager.App.csproj">
       <Project>{A01D80CF-4457-4A44-925E-35F237D948BD}</Project>
       <Name>JS.UnityManager.App</Name>
